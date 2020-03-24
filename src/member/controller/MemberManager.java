@@ -88,7 +88,7 @@ public class MemberManager {
 		System.out.println("수정할 회원의 아이디를 입력하세요 : ");
 		String userId = sc.next();
 		
-		//ㅇ
+		//어렵다
 		for()
 		
 		
