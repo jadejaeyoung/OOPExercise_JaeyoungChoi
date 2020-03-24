@@ -30,7 +30,7 @@ public class MemberManager {
 		System.out.println("이메일 : ");
 		String email = sc.next();
 		
-		//이거 어렵다..
+		//코드가 잘 떠오르지 않았음
 		m[ctn] = new Member(userId, userPwd, userName, age, gender, email);
 		ctn++;
 		
@@ -62,7 +62,6 @@ public class MemberManager {
 		System.out.println("검색할 이름을 입력하세요 : ");
 		String userName = sc.next();
 		
-		
 		for(int i = 0; i < ctn; i++) {
 			if(m[i].getUserName().equals(userName)) {
 				printOne(m[i]);
@@ -72,15 +71,26 @@ public class MemberManager {
 		}
 		
 		
-		
 	}
 	
 	
 	public void searchEmail() {
+		System.out.println("검색할 이메일을 입력하세요 : ");
+		String userEmail = sc.next();
 		
-		System.out.println(1);
+		for(int i = 0; i < ctn; i++) {
+			if(m[i].getEmail().equals(userEmail)) {
+				printOne(m[i]);
+			} else {
+				System.out.println("검색한 회원 이메일이 존재하지 않습니다.");
+			}
+		}
+		
+		
+		
 		
 	}
+	
 	
 	
 	public void updatePwd() {
